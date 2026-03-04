@@ -1,34 +1,76 @@
-\# Ab-Initio Hydrogen Atom Solver
+\# Hydrogen Atom Ab-initio Solver
 
 
 
-This project numerically solves the radial Schrödinger equation
+This project implements a simple ab-initio numerical solution of the radial Schrödinger equation for the hydrogen atom using finite difference methods.
 
-for the hydrogen atom using finite difference discretization.
+
+
+\## Theory
+
+
+
+We solve the radial Schrödinger equation:
+
+
+
+-1/2 d²u/dr² - 1/r u = E u
+
+
+
+The exact ground state energy is:
+
+
+
+E = -0.5 Hartree
 
 
 
 \## Method
 
-\- Atomic units
-
-\- Finite difference method
-
-\- Tridiagonal eigenvalue solver
 
 
+\- Finite difference discretization
 
-\## Result
+\- Tridiagonal Hamiltonian matrix
 
-Ground state energy ≈ -0.499 Hartree
+\- Eigenvalue solution using scipy.linalg.eigh\_tridiagonal
 
-Exact value = -0.500 Hartree
+\- Wavefunction normalization
+
+
+
+\## Results
+
+
+
+The computed ground state energy is approximately:
+
+
+
+E ≈ -0.499 Hartree
+
+
+
+which agrees well with the theoretical value -0.5 Hartree.
+
+
+
+\## Requirements
+
+
+
+numpy  
+
+matplotlib  
+
+scipy  
 
 
 
 \## Author
 
-Muhammed Eren Balibey
 
-Course: Computational Modeling and Simulation of Materials
+
+Eren Balibey
 
